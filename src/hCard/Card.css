@@ -1,0 +1,48 @@
+.vcard{
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header{
+    position: relative;
+    height: 64px;
+    padding: 24px;
+    font-size: 24px;
+    background-color: 	#394f63;
+    color: white;
+}
+
+.photo{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    height: 120px;
+    width: 90px;
+}
+
+.card-body{
+    padding: 24px;
+    background-color: white;
+}
+
+.card-section{
+    height: 44px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #e7e9ec;
+}
+
+.section-title{
+    color: 	#394f63;
+    width: 100px;
+}
+
+.half-section{
+    width: 50%;
+    display: flex;
+}
+
+.address-line-two{
+    margin-left: 100px;
+}
