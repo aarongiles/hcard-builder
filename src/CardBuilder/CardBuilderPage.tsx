@@ -28,7 +28,6 @@ export const CardBuilderPage = () =>{
   const fileInputRef = useRef(null);
 
   const handleUpload = (event) =>{
-      fileInputRef.current.click();
       setDetails({...details, ["avatar"]:URL.createObjectURL(event.target.files[0])})
   }
 
@@ -45,6 +44,7 @@ export const CardBuilderPage = () =>{
             <InputSection key={`section-${section.sectionTitle}`} title={section.sectionTitle}>
                  {section.inputs.map((input)=>(
                 <Input 
+                    id={`input-${input.mapped}`}
                     label={input.label} 
                     value={details[input.mapped]} 
                     onChange={(changed)=>{
@@ -57,7 +57,7 @@ export const CardBuilderPage = () =>{
         ))}
         <div className="buttons-container">
             <input hidden ref={fileInputRef} type="file" onChange={(event)=> handleUpload(event)}/>
-            <button className="upload-button" onClick={handleUpload}>
+            <button className="upload-button" onClick={()=>{fileInputRef.current.click();}}>
                 Upload Avatar
             </button>
             <button className="create-button" onClick={handleCreate}>
